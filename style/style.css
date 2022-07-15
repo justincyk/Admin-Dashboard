@@ -163,13 +163,23 @@ form {
   padding-right: 25px;
 }
 
-.right_card  > p {
-  margin-bottom: 2px;
-}
-
 .announcements {
   border: black solid 1px;
   padding: 6px;
+}
+
+.announcement > p:nth-child(1)  {
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+
+.announcement > p:nth-child(2) {
+  margin-top: 0;
+  font-size: 0.7rem;
+}
+
+.right_card > p:nth-child(1) {
+  margin-bottom: 2px;
 }
 
 .logo {
