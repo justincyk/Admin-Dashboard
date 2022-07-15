@@ -1,38 +1,47 @@
 
 body {
+  /* position: fixed; */
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   color: white;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .wrapper {
   display: flex;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%
 }
 
 .container {
   display: grid;
   width: 100%;
   height: 100%;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: 1fr 1.5fr 3fr 3fr;
+  grid-template-columns: 1.1fr 4fr 1.3fr;
+  grid-template-rows: 55px 110px 3fr 3fr;
 }
 
 .sidemenu {
   /* padding: 10px; */
+  position: relative;
   grid-column: 1/2;
   grid-row: 1/5;
   background-color: maroon;
+
+}
+
+.sidemenu > .links {
+
 }
 
 .search {
   display: grid;
   grid-template-columns: auto 1fr auto auto auto;
   gap: 20px;
+  padding-top: 10px;
   padding-left: 30px;
   padding-right: 40px;
   align-items: center;
@@ -44,6 +53,7 @@ body {
 form > input[type="search"] {
   width: 100%;
   min-width: 200px;
+  height: 22px;
   border: 1px solid white;
   border-radius: 10px;
   background-color: lightgray;
@@ -68,7 +78,8 @@ form {
 
 .header > button {
   background-color: white;
-  width: 75px;
+  width: 80px;
+  height: 28px;
   border: maroon solid 2px;
   border-radius: 12px;
 }
@@ -85,14 +96,80 @@ form {
 
 
 .notes {
+  color: black;
   grid-column: 2/3;
   grid-row: 3/5;
-  background-color: bisque;
+  background-color: white;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 20px;
+  padding-right: 0;
+  background-color: white;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px,45%));
+  row-gap: 35px;
+  column-gap: 30px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.notes > p {
+  padding-left: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 12px;
+  background-color: black;
+  border-left: 8px solid maroon;
+  border-radius: 15px;
+  max-height: auto;
+}
+
+.card > p:nth-child(1) >  span {
+  font-size: 1.2rem;
+}
+
+.card > p:nth-child(1) {
+  color: lightgray;
+  font-size: 0.8rem;
+  flex: 1;
+}
+
+.icons {
+  color: black;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 6px;
 }
 
 .sidebar {
+  color: black;
   grid-row: 3/5;
-  background-color: darksalmon;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  grid-template-rows: 1fr 1fr;
+  padding-top: 20px;
+  padding-right: 25px;
+}
+
+.right_card  > p {
+  margin-bottom: 2px;
+}
+
+.announcements {
+  border: black solid 1px;
+  padding: 6px;
 }
 
 .logo {
@@ -129,12 +206,27 @@ form {
   margin-top: 35px;
 }
 
-img {
+.profile {
   border-radius: 50%;
   border: maroon solid 2px;
 }
 
+.test {
+  padding-top: 15px;
+  position: sticky;
+  top: 0;
+}
 
-.notes, .sidebar {
+
+/* .notes, .sidebar {
   background-color: lightgray;
+} */
+
+
+.intro {
+  font-size: 1.7rem;
+}
+
+.intro > span {
+  font-size: 0.8rem;
 }
