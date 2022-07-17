@@ -1,3 +1,7 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
 
 body {
   /* position: fixed; */
@@ -8,18 +12,17 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 100%;
 }
 
 .wrapper {
   display: flex;
-  width: 100%;
-  height: 100%
 }
 
 .container {
   display: grid;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   grid-template-columns: 1.1fr 4fr 1.3fr;
   grid-template-rows: 55px 110px 3fr 3fr;
 }
@@ -39,6 +42,7 @@ body {
 
 .search {
   display: grid;
+  font-size: 1.2rem;
   grid-template-columns: auto 1fr auto auto auto;
   gap: 20px;
   padding-top: 10px;
@@ -77,11 +81,13 @@ form {
 }
 
 .header > button {
+  font-size: 1.2rem;
+  font-weight: bold;
   background-color: white;
-  width: 80px;
-  height: 28px;
+  min-width: 4vw;
+  height: 3vh;
   border: maroon solid 2px;
-  border-radius: 12px;
+  border-radius: 15px;
 }
 
 .header > img {
@@ -95,16 +101,22 @@ form {
 }
 
 
+
+
 .notes {
   color: black;
   grid-column: 2/3;
   grid-row: 3/5;
   background-color: white;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   padding: 20px;
   padding-right: 0;
   background-color: white;
+}
+
+.notes > p:nth-child(1) {
+  font-size: 1.3rem;
 }
 
 .cards{
@@ -163,9 +175,21 @@ form {
   padding-right: 25px;
 }
 
-.announcements {
+.announcements, .profiles {
   border: black solid 1px;
-  padding: 6px;
+  padding: 15px;
+  height: 25vh;
+  border-radius: 13px;
+  max-height: 50vh;
+  min-height: 30vh;
+  min-width: 13vw;
+  max-width: 15vw;
+  display: grid;
+}
+
+.announcement {
+  max-width: 20vw;
+  max-height: 10vh;
 }
 
 .announcement > p:nth-child(1)  {
@@ -180,6 +204,7 @@ form {
 
 .right_card > p:nth-child(1) {
   margin-bottom: 2px;
+  font-size: 1.5rem;
 }
 
 .logo {
@@ -203,6 +228,7 @@ form {
   gap: 10px;
   justify-content: center;
   align-items: flex-start;
+  font-size: 1.2rem;
 }
 
 .links > ul > li {
@@ -238,5 +264,31 @@ form {
 }
 
 .intro > span {
+  font-size: 1rem;
+}
+
+
+.profile {
+  border: none;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.userName > p {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+}
+
+.userName > p:nth-child(2) {
   font-size: 0.8rem;
 }
